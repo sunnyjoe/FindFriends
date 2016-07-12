@@ -8,14 +8,11 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, IChatManagerDelegate{
+class ChatViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        EaseMob.sharedInstance().chatManager.addDelegate(self, delegateQueue: nil)
+ 
     }
 
  
