@@ -9,7 +9,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +24,14 @@ class MainViewController: UIViewController {
         chatButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         chatButton.addTarget(self, action: #selector(gotoChatView), forControlEvents: .TouchUpInside)
         chatButton.setTitle("Chat", forState: .Normal)
+        
+        var newError : EMError?
+        let userList = EMClient.sharedClient().contactManager.getContactsFromServerWithError(&newError)
+        print(userList)
+      //  EMClient.sharedClient().contactManager.acceptInvitationForUsername("002")
+        
+//        EMClient.sharedClient().contactManager.addContact("002", message: "Add Friend")
+//        EMClient.sharedClient().contactManager.addDelegate(self, delegateQueue: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,10 +40,16 @@ class MainViewController: UIViewController {
     }
     
     func gotoChatView(){
-        let chatVC = ChatViewController(conversationChatter: "002", conversationType: EMConversationTypeChat)
-        chatVC.friendName = "002"
+        let chatVC = ChatViewController(conversationChatter: "001", conversationType: EMConversationTypeChat)
+        chatVC.friendName = "001"
         self.navigationController?.pushViewController(chatVC, animated: true)
     }
+}
 
+extension MainViewController : EMContactManagerDelegate {
+    func didReceiveFriendInvitationFromUsername(aUsername: String!, message aMessage: String!) {
+        UIAlertView.init(title: "Request add friend", message: aMessage, delegate: nil, cancelButtonTitle: "Not Accept").show()
+        
+    }
 }
 
