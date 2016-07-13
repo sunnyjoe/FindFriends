@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
         
         view.backgroundColor = UIColor.whiteColor()
  
-        let error = EMClient.sharedClient().loginWithUsername("002", password: "002")
+        let error = EMClient.sharedClient().loginWithUsername("001", password: "001")
         if (error == nil) {
             print("login ok")
         }
@@ -27,17 +27,15 @@ class MainViewController: UIViewController {
         chatButton.setTitle("Chat", forState: .Normal)
     }
     
-    override func didMoveToParentViewController(parent: UIViewController?) {
-        if parent == nil {
-            return
-        }
-        
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
     }
     
     func gotoChatView(){
-      //  let chatVC = ChatViewController(conversationChatter: "002", conversationType: EMConversationTypeChat)
-      //  self.navigationController?.pushViewController(chatVC, animated: true)
+        let chatVC = ChatViewController(conversationChatter: "002", conversationType: EMConversationTypeChat)
+        chatVC.friendName = "002"
+        self.navigationController?.pushViewController(chatVC, animated: true)
     }
 
 }

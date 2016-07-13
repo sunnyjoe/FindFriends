@@ -209,8 +209,9 @@
     EaseEmotionManager *emotionManager = [_emotionManagers objectAtIndex:section];
     CGFloat itemWidth = self.frame.size.width / emotionManager.emotionCol;
     NSInteger pageSize = emotionManager.emotionRow*emotionManager.emotionCol;
-    NSInteger lastPage = (pageSize - [emotionManager.emotions count]%pageSize);
-    if (lastPage < emotionManager.emotionRow ||[emotionManager.emotions count]%pageSize == 0) {
+    pageSize = MAX(pageSize, 1);
+    NSInteger lastPage = (pageSize - [emotionManager.emotions count] % pageSize);
+    if (lastPage < emotionManager.emotionRow ||[emotionManager.emotions count] % pageSize == 0) {
         return CGSizeMake(0, 0);
     } else{
         NSInteger size = lastPage/emotionManager.emotionRow;

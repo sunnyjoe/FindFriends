@@ -8,12 +8,17 @@
 
 import UIKit
 
-class ChatViewController: UIViewController{
-
+class ChatViewController: EaseMessageViewController{
+    var friendName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        title = friendName
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = false
     }
 
- 
 }
