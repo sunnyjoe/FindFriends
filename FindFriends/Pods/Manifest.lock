@@ -1,0 +1,13 @@
+PODS:
+  - Cartography (0.6.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Cartography
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
