@@ -13,12 +13,9 @@ class ChatViewController: EaseMessageViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = friendName
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = false
-    }
+ 
 
 }

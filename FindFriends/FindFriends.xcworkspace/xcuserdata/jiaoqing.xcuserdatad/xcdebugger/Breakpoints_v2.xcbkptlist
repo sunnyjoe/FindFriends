@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   type = "1"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
@@ -13,9 +13,9 @@
             timestampString = "490170452.956266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "didReceiveFriendInvitationFromUsername(_:message:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "showProfileView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FindFriends/UIFont.m"
-            timestampString = "490158672.775238"
+            filePath = "FindFriends/MainViewController.swift"
+            timestampString = "490170452.956266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "+boldHelveticaFontOfSize:"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "showProfileView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FindFriends/MainViewController.swift"
+            timestampString = "490170452.956266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "showProfileView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

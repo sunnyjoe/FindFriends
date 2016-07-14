@@ -11,7 +11,6 @@
  */
 
 #import "EaseRefreshTableViewController.h"
-
 #import "MJRefresh.h"
 
 @interface EaseRefreshTableViewController ()

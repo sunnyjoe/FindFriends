@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options.apnsCertName = easemobApnsCertName
         EMClient.sharedClient().initializeSDKWithOptions(options)
         
-        window!.rootViewController = UINavigationController(rootViewController: MainViewController())
+        window!.rootViewController = UINavigationController(rootViewController: MainViewController.sharedInstance)
         window!.makeKeyWindow()
         
         return true
