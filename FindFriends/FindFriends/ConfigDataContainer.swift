@@ -23,7 +23,39 @@ class ConfigDataContainer: NSObject
         
     }
     
+    func getFriendInfoById(id : String) -> FriendInfo?{
+        if let tmp = getCachedFriendInfoById(id){
+            return tmp
+        }
+        //fixme
+        //sendnettask
+        return nil
+    }
     
+    func getCachedFriendInfoById(id : String) -> FriendInfo?{
+        let fake1 = FriendInfo()
+        fake1.name = "Fake1"
+        fake1.careerInfo = "Supply Chain"
+        fake1.isFemale = true
+        fake1.imageUrl = "http://thumbs.xdesktopwallpapers.com/wp-content/uploads/2012/01/Smiling%20Asian%20Girl%20Cute%20Face%20And%20Naughty%20Pose-720x405.jpg"
+        return fake1
+    }
+
+    func getCachedRecommendFriends() -> [FriendInfo]{
+        let fake1 = FriendInfo()
+        fake1.name = "Sunny Jiao"
+        fake1.careerInfo = "Supply Chain"
+        fake1.isFemale = true
+        fake1.imageUrl = "http://beauty.pclady.com.cn/sszr/0601/pic/20060117_bb_9.jpg"
+        
+        let fake2 = FriendInfo()
+        fake2.name = "Wong Xuan"
+        fake2.careerInfo = "Sales, now reading a MBA"
+        fake2.isFemale = false
+        fake2.imageUrl = "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"
+        
+        return [fake1, fake2, fake1, fake2, fake2];
+    }
     
     func getCountryCodeDic() -> NSDictionary{
         if countryCodeDic == nil{

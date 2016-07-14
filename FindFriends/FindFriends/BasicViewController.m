@@ -19,16 +19,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.title = @"";
-    
-    self.titleLabel.font = [UIFont mediumfont:15];
-    self.titleLabel.frame = CGRectMake(0, 0, 0, 30);
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.titleLabel.textColor = [UIColor defaultBlack];
 }
 
+-(UILabel *)titleLabel{
+    if (!_titleLabel) {
+        _titleLabel = [UILabel new];
+        _titleLabel.font = [UIFont mediumfont:15];
+        _titleLabel.frame = CGRectMake(0, 0, 0, 30);
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.textColor = [UIColor defaultBlack];
+    }
+    return _titleLabel;
+}
 
 -(void)willMoveToParentViewController:(UIViewController *)parent{
     if (parent) {

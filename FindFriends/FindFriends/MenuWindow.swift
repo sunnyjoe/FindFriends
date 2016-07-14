@@ -17,10 +17,11 @@ class MenuWindow: UIWindow {
         let bgV = UIImageView(frame : bounds)
         addSubview(bgV)
         bgV.image = UIImage(named: "MenuBG")
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
 }

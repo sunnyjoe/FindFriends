@@ -6,7 +6,6 @@
 //  Copyright © 2016 jiao qing. All rights reserved.
 //
 
-import UIKit
-
+ 
 let easemobAppKey = "jiaoqing#findfriends"
 let easemobApnsCertName = "istore_dev"
