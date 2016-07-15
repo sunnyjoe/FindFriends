@@ -9,3 +9,6 @@
  
 let easemobAppKey = "jiaoqing#findfriends"
 let easemobApnsCertName = "istore_dev"
+
+let keyMyOwnUserId = "keyMyOwnUserId"
+let keyCachedRecomendFriendsId = "keyCachedRecomendFriendsId"

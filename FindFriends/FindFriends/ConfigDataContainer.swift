@@ -11,6 +11,10 @@ import Foundation
 import CoreTelephony
 
 
+
+private let FriendsInfoTable = TableWith("FriendsInfoTable", type: FriendInfo.self, primaryKey: "id", dbName: "FriendsInfoTable")
+
+
 class ConfigDataContainer: NSObject
 {
     static let sharedInstance = ConfigDataContainer()
@@ -23,38 +27,74 @@ class ConfigDataContainer: NSObject
         
     }
     
-    func getFriendInfoById(id : String) -> FriendInfo?{
-        if let tmp = getCachedFriendInfoById(id){
+    func getMyId() -> String?{
+        if let tmp = NSUserDefaults.standardUserDefaults().objectForKey(keyMyOwnUserId) as? String {
             return tmp
         }
-        //fixme
-        //sendnettask
         return nil
     }
     
-    func getCachedFriendInfoById(id : String) -> FriendInfo?{
-        let fake1 = FriendInfo()
-        fake1.name = "Fake1"
-        fake1.careerInfo = "Supply Chain"
-        fake1.isFemale = true
-        fake1.imageUrl = "http://thumbs.xdesktopwallpapers.com/wp-content/uploads/2012/01/Smiling%20Asian%20Girl%20Cute%20Face%20And%20Naughty%20Pose-720x405.jpg"
-        return fake1
+    func getMyInfo(handler : (FriendInfo?) -> Void){
+        if let myId = getMyId(){
+            getFriendInfoById(myId, handler)
+        }else{
+            handler(nil)
+        }
     }
-
-    func getCachedRecommendFriends() -> [FriendInfo]{
-        let fake1 = FriendInfo()
-        fake1.name = "Sunny Jiao"
-        fake1.careerInfo = "Supply Chain"
-        fake1.isFemale = true
-        fake1.imageUrl = "http://beauty.pclady.com.cn/sszr/0601/pic/20060117_bb_9.jpg"
+    
+    func resetUserId(id : String?){
+        if id == nil {
+            NSUserDefaults.standardUserDefaults().setObject(id, forKey: keyMyOwnUserId)
+        }else{
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(keyMyOwnUserId)
+        }
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func getFriendInfoById(id : String, _ handler : (FriendInfo?) -> Void){
+        let handlerWarpper = {(info : FriendInfo?) -> Void in
+            if info != nil {
+                handler(info)
+            }else{
+                //send nettask
+                let fake1 = FriendInfo()
+                fake1.name = "Sunny Jiao"
+                fake1.careerInfo = "Supply Chain"
+                fake1.isFemale = true
+                fake1.imageUrl = "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"
+                handler(fake1)
+            }
+        }
+        getCachedFriendInfoById(id, handlerWarpper)
+    }
+    
+    func getCachedFriendInfoById(id : String, _ handler : (FriendInfo?) -> Void){
+        let handlerWarpper = {(infos : [FriendInfo]) -> Void in
+            if infos.count > 0 {
+                handler(infos[0])
+            }else{
+                handler(nil)
+            }
+        }
+        FriendsInfoTable.query(["id"], values: [id], handler : handlerWarpper)
+    }
+    
+    func getCachedRecommendFriends(handler : ([FriendInfo]) -> Void){
+        let cahcedRecommendIds : [String] = getCachedRecomendFriendsId()
         
-        let fake2 = FriendInfo()
-        fake2.name = "Wong Xuan"
-        fake2.careerInfo = "Sales, now reading a MBA"
-        fake2.isFemale = false
-        fake2.imageUrl = "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"
-        
-        return [fake1, fake2, fake1, fake2, fake2];
+        FriendsInfoTable.query(["id"], values: cahcedRecommendIds, handler : handler)
+    }
+    
+    func getCachedRecomendFriendsId() -> [String] {
+        if let tmp = NSUserDefaults.standardUserDefaults().objectForKey(keyCachedRecomendFriendsId) as? [String] {
+            return tmp
+        }
+        return [String]()
+    }
+    
+    func updateCachedRecomendFriendsId(ids : [String]) {
+        NSUserDefaults.standardUserDefaults().setObject(ids, forKey: keyCachedRecomendFriendsId)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func getCountryCodeDic() -> NSDictionary{
@@ -94,7 +134,7 @@ class ConfigDataContainer: NSObject
         return nil
     }
     
-       func getLengthOfPhoneNumByCountryCode(code : String) -> (Int, Int) {
+    func getLengthOfPhoneNumByCountryCode(code : String) -> (Int, Int) {
         let ccd = getCountryCodeDic()
         let orgKeys = ccd.allKeys as? [String]
         if orgKeys == nil{

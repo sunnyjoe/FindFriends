@@ -1,13 +1,28 @@
 PODS:
   - Cartography (0.6.0)
+  - FMDB/standalone (2.6.2):
+    - FMDB/standalone/default (= 2.6.2)
+    - FMDB/standalone/FTS (= 2.6.2)
+  - FMDB/standalone/default (2.6.2):
+    - sqlite3
+  - FMDB/standalone/FTS (2.6.2):
+    - sqlite3/fts
+  - sqlite3 (3.13.0):
+    - sqlite3/common (= 3.13.0)
+  - sqlite3/common (3.13.0)
+  - sqlite3/fts (3.13.0):
+    - sqlite3/common
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Cartography
+  - FMDB/standalone
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  sqlite3: c8b1b937fe823ab46411e471cdc1aa92d1b106ce
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

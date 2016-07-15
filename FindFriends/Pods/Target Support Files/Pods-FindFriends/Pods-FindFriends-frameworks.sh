@@ -85,9 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FindFriends/Cartography.framework"
+  install_framework "Pods-FindFriends/FMDB.framework"
   install_framework "Pods-FindFriends/SwiftyJSON.framework"
+  install_framework "Pods-FindFriends/sqlite3.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FindFriends/Cartography.framework"
+  install_framework "Pods-FindFriends/FMDB.framework"
   install_framework "Pods-FindFriends/SwiftyJSON.framework"
+  install_framework "Pods-FindFriends/sqlite3.framework"
 fi

@@ -8,10 +8,13 @@
 
 import UIKit
 
+protocol RecommendCardViewDelegate : NSObjectProtocol{
+    func recommendCardViewDidClickSay(recommendCardView : RecommendCardView)
+}
+
 class RecommendCardView: UIView {
     var friendInfo : FriendInfo?
-    
-    
+    weak var delegate : RecommendCardViewDelegate?
     
     init(frame: CGRect, friendInfo : FriendInfo) {
         super.init(frame: frame)
@@ -43,21 +46,25 @@ class RecommendCardView: UIView {
             }
         }
         
-        if let one = ConfigDataContainer.sharedInstance.getFriendInfoById(friendInfo!.throughFriendId){
-            let topLeftIV = UIImageView(frame : CGRectMake(5, 5, 70, 70))
-            topLeftIV.backgroundColor = UIColor.whiteColor()
-            topLeftIV.layer.cornerRadius = topLeftIV.frame.size.width / 2
-            topLeftIV.layer.borderColor = UIColor.lightGrayColor().CGColor
-            topLeftIV.layer.borderWidth = 0.5
-            topLeftIV.contentMode = .ScaleAspectFill
-            topLeftIV.clipsToBounds = true
-            addSubview(topLeftIV)
-            if let imageStr = one.imageUrl{
-                if let url = NSURL(string : imageStr){
-                    topLeftIV.sd_setImageWithURL(url)
+        let handler = {(info : FriendInfo?) -> Void in
+            if let friend = info {
+                let topLeftIV = UIImageView(frame : CGRectMake(5, 5, 70, 70))
+                topLeftIV.backgroundColor = UIColor.whiteColor()
+                topLeftIV.layer.cornerRadius = topLeftIV.frame.size.width / 2
+                topLeftIV.layer.borderColor = UIColor.lightGrayColor().CGColor
+                topLeftIV.layer.borderWidth = 0.5
+                topLeftIV.contentMode = .ScaleAspectFill
+                topLeftIV.clipsToBounds = true
+                self.addSubview(topLeftIV)
+                if let imageStr = friend.imageUrl{
+                    if let url = NSURL(string : imageStr){
+                        topLeftIV.sd_setImageWithURL(url)
+                    }
                 }
             }
         }
+        
+        ConfigDataContainer.sharedInstance.getFriendInfoById(friendInfo!.throughFriendId, handler)
         
         let nameLabel = UILabel(frame : CGRectMake(0, CGRectGetMaxY(bigIV.frame) + 10, frame.size.width, 30))
         nameLabel.text = friendInfo!.name
@@ -75,7 +82,12 @@ class RecommendCardView: UIView {
         
         let sayBtn = UIButton(frame : CGRectMake(frame.size.width - 45, CGRectGetMaxY(bigIV.frame) + 10, 30, 30))
         sayBtn.withImage(UIImage(named: "CommentIcon"))
+        sayBtn.addTarget(self, action: #selector(didClickSayBtn), forControlEvents: .TouchUpInside)
         addSubview(sayBtn)
+    }
+    
+    func didClickSayBtn(){
+        self.delegate?.recommendCardViewDidClickSay(self)
     }
     
     required init?(coder aDecoder: NSCoder) {

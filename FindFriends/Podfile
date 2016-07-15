@@ -8,4 +8,5 @@ use_frameworks!
 target 'FindFriends' do
     pod 'SwiftyJSON'
     pod 'Cartography'
+    pod 'FMDB/standalone'
 end
