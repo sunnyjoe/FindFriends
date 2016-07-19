@@ -10,5 +10,7 @@
 let easemobAppKey = "jiaoqing#findfriends"
 let easemobApnsCertName = "istore_dev"
 
+let herokuBasicUrl = "https://xuran-jiaoqing-findfriends.herokuapp.com/"
+
 let keyMyOwnUserId = "keyMyOwnUserId"
 let keyCachedRecomendFriendsId = "keyCachedRecomendFriendsId"
