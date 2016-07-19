@@ -41,7 +41,7 @@ class ConfigDataContainer: NSObject
             handler(nil)
         }
     }
-    
+     
     func resetUserId(id : String?){
         if id == nil {
             NSUserDefaults.standardUserDefaults().setObject(id, forKey: keyMyOwnUserId)
