@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '56D6FC04C3BE1CE0FBBCB0C3'
+               BlueprintIdentifier = '6A7270DE617AB85B85A7E15D'
                BlueprintName = 'Pods-FindFriends'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_FindFriends.framework'>
