@@ -19,7 +19,6 @@ class NetWorkHandler: NSObject {
         return one
     }()
     
-    
     func sendNetTask(task : BaseNetTask){
         var httpManager = httpQueryStringManager
         
