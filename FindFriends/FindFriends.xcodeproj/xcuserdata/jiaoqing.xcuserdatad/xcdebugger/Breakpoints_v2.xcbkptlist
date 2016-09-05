@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindFriends/MainViewController.swift"
-            timestampString = "490260748.620762"
+            timestampString = "494754559.843766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "didReceiveFriendInvitationFromUsername(_:message:)"
             landmarkType = "5">
          </BreakpointContent>

@@ -10,6 +10,7 @@ import UIKit
 
 protocol RecommendCardViewDelegate : NSObjectProtocol{
     func recommendCardViewDidClickSay(recommendCardView : RecommendCardView)
+    func recommendCardViewDidUser(recommendCardView : RecommendCardView)
 }
 
 class RecommendCardView: UIView {
@@ -28,10 +29,12 @@ class RecommendCardView: UIView {
             return
         }
         
-        let bigIV = UIImageView(frame : CGRectMake(15, 15, frame.size.width - 15 * 2, frame.size.height - 15 - 80))
+        let bigIV = UIImageView(frame : CGRectMake(15, 15, frame.size.width - 15 * 2, frame.size.height - 15 - 80 - 50))
         addSubview(bigIV)
         bigIV.contentMode = .ScaleAspectFit
         bigIV.clipsToBounds = true
+        bigIV.userInteractionEnabled = true
+        bigIV.addTapGestureTarget(self, action: #selector(didClickBigIV))
        
         if let imageStr = friendInfo!.imageUrl{
             if let url = NSURL(string : imageStr){
@@ -55,6 +58,8 @@ class RecommendCardView: UIView {
                 topLeftIV.layer.borderWidth = 0.5
                 topLeftIV.contentMode = .ScaleAspectFill
                 topLeftIV.clipsToBounds = true
+                topLeftIV.userInteractionEnabled = true
+                topLeftIV.addTapGestureTarget(self, action: #selector(self.didClickBigIV))
                 self.addSubview(topLeftIV)
                 if let imageStr = friend.imageUrl{
                     if let url = NSURL(string : imageStr){
@@ -78,12 +83,24 @@ class RecommendCardView: UIView {
             infoLabel.textAlignment = .Center
             infoLabel.withTextColor(UIColor.defaultBlack()).font = UIFont.italicFont(15)
             addSubview(infoLabel)
+
         }
         
         let sayBtn = UIButton(frame : CGRectMake(frame.size.width - 45, CGRectGetMaxY(bigIV.frame) + 10, 30, 30))
         sayBtn.withImage(UIImage(named: "CommentIcon"))
         sayBtn.addTarget(self, action: #selector(didClickSayBtn), forControlEvents: .TouchUpInside)
         addSubview(sayBtn)
+        
+        
+        let infoLabel = UILabel(frame : CGRectMake(0, CGRectGetMaxY(nameLabel.frame) + 33, frame.size.width, 30))
+        infoLabel.text = "You both like dance, try to say hi!"
+        infoLabel.textAlignment = .Center
+        infoLabel.withTextColor(UIColor.defaultBlack()).withFontHeletica(16)
+        addSubview(infoLabel)
+    }
+    
+    func didClickBigIV(){
+        delegate?.recommendCardViewDidUser(self)
     }
     
     func didClickSayBtn(){

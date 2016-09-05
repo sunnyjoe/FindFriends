@@ -10,4 +10,5 @@
 
 @interface BasicViewController : UIViewController
 @property (nonatomic, copy) NSString *title;
+-(void)addWhiteBackButton;
 @end

@@ -32,7 +32,7 @@ class LoginViewController : BasicViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.addTapGestureTarget(self, action: #selector(LoginViewController.hideKeyboard))
         
         scrollView.frame = view.bounds
@@ -103,13 +103,13 @@ class LoginViewController : BasicViewController{
         inputAreaView.addSubviews(countryCodeLabel, phoneNumTextField, otpTextField, sendOtpButton, tipLabel)
         
         loginButton.frame =  CGRect(x: 50, y: inputAreaView.frame.maxY + 15, width: view.frame.width - 100, height: 40)
- 
+        
         let fbIconView = UIImageView(image: UIImage(named: "LoginFBIcon"))
         fbIconView.frame = CGRect(x: view.frame.width / 2 - 70, y: scrollView.frame.height - 110 + 2 - 15, width: 11, height: 11)
         scrollView.addSubview(fbIconView)
         
-        loginButton.addTarget(self, action: #selector(LoginViewController.login), forControlEvents: .TouchUpInside)
- 
+        loginButton.addTarget(self, action: #selector(login), forControlEvents: .TouchUpInside)
+        
         
         loginButton.withTitle(("LOG IN"))
         loginButton.blackTitleWhiteStyle()
@@ -120,8 +120,8 @@ class LoginViewController : BasicViewController{
         scrollView.contentSize = scrollView.frame.size
         view.addSubview(scrollView)
     }
-
-
+    
+    
     
     func addInputAccessoryViewToTextField(textField : UITextField) {
         let space1 = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
@@ -137,24 +137,24 @@ class LoginViewController : BasicViewController{
         tipContent = ("We'll send an OTP to login. You can resend it after 60 seconds.")
         resetTipLabel()
         
-//        let smsNT = SMSCodeNetTask()
-//        if let text = phoneNumTextField.text {
-//            lastSendOtpTime = NSDate.currentTimeMillis()
-//            let pStr = text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-//            smsNT.photoNumber = "\(countryCode)\(pStr)"
-//            MONetTaskQueue.instance().addTaskDelegate(self, uri: smsNT.uri())
-//            MONetTaskQueue.instance().addTask(smsNT)
-//            
-//            counting = Int(countDownSeconds)
-//            sendOtpButton.withTitleColor(UIColor(fromHexString: "cecece"))
-//            sendOtpButton.withTitle("\(counting)s")
-//            countingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(LoginViewController.updateCounting), userInfo: nil, repeats: true)
-//            setSendOTPButtonEnabled(false)
-//        }
+        //        let smsNT = SMSCodeNetTask()
+        //        if let text = phoneNumTextField.text {
+        //            lastSendOtpTime = NSDate.currentTimeMillis()
+        //            let pStr = text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        //            smsNT.photoNumber = "\(countryCode)\(pStr)"
+        //            MONetTaskQueue.instance().addTaskDelegate(self, uri: smsNT.uri())
+        //            MONetTaskQueue.instance().addTask(smsNT)
+        //
+        //            counting = Int(countDownSeconds)
+        //            sendOtpButton.withTitleColor(UIColor(fromHexString: "cecece"))
+        //            sendOtpButton.withTitle("\(counting)s")
+        //            countingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(LoginViewController.updateCounting), userInfo: nil, repeats: true)
+        //            setSendOTPButtonEnabled(false)
+        //        }
     }
     
     func login(){
-  
+        presentViewController(ProfileEditViewController(), animated: true, completion: nil)
     }
     
     
@@ -165,7 +165,7 @@ class LoginViewController : BasicViewController{
         if self.navigationController != nil {
             self.navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
             self.navigationController!.navigationBar.barStyle = .Default
-          //  self.backButton.setImage(UIImage(named: "BackIconNormal"), forState: .Normal)
+            //  self.backButton.setImage(UIImage(named: "BackIconNormal"), forState: .Normal)
         }
         
         setTimerIfNeeded()
@@ -178,7 +178,7 @@ class LoginViewController : BasicViewController{
         if self.navigationController != nil {
             self.navigationController!.navigationBar.barTintColor = UIColor.defaultBlack()
             self.navigationController!.navigationBar.barStyle = .Black
-           // self.backButton.setImage(UIImage(named: "WhiteBackIconNormal"), forState: .Normal)
+            // self.backButton.setImage(UIImage(named: "WhiteBackIconNormal"), forState: .Normal)
         }
         
         countingTimer?.invalidate()

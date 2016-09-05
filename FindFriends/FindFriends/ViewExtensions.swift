@@ -9,6 +9,12 @@
 import UIKit
 
 extension UIView {
+    func addBorder(){
+        let border = UIView(frame : CGRectMake(0, frame.size.height - 0.5, frame.size.width, 0.5))
+        border.backgroundColor = DJCommonStyle.ColorCE
+        addSubview(border)
+    }
+    
     func addSubviews(views : UIView...) {
         for v in views {
             self.addSubview(v)
