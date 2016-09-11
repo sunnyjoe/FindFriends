@@ -15,7 +15,7 @@ enum HTTPTaskMethod {
 
 class BaseNetTask: NSObject {
     var success = {(task : NSURLSessionDataTask, response : AnyObject?) -> Void in }
-    var failed = {(task : NSURLSessionDataTask?, response : AnyObject) -> Void in }
+    var failed = {(task : NSURLSessionDataTask?, error : NSError) -> Void in }
     
     func uri() -> String!
     {

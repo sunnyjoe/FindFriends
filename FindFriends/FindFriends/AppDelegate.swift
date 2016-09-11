@@ -24,11 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = UINavigationController(rootViewController: MainViewController.sharedInstance)
         window!.makeKeyWindow()
         
-        let error = EMClient.sharedClient().loginWithUsername("001", password: "001")
-        if (error == nil) {
-            print("login ok")
-        }
-        
+//        let error = EMClient.sharedClient().loginWithUsername("001", password: "001")
+//        if (error == nil) {
+//            print("login ok")
+//        }
+//        
         return true
     }
 

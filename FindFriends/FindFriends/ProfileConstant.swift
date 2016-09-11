@@ -10,7 +10,14 @@
 let easemobAppKey = "jiaoqing#findfriends"
 let easemobApnsCertName = "istore_dev"
 
-let herokuBasicUrl = "https://xuran-jiaoqing-findfriends.herokuapp.com/"
+#if DEBUG
+let baseUrl = "http://localhost:3000/start/"
+#else
+let baseUrl = "https://xuran-jiaoqing-findfriends.herokuapp.com/"
+#endif
+
+
+
 
 let keyMyOwnUserId = "keyMyOwnUserId"
 let keyCachedRecomendFriendsId = "keyCachedRecomendFriendsId"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F27C8441D547B8100AA8987 /* TestNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F27C8431D547B8100AA8987 /* TestNetTask.swift */; };
 		2B6A706F0386AE18BA4D82F7 /* Pods_FindFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0BB63168208FE9C94DBADD /* Pods_FindFriends.framework */; };
 		6D0064421D34FB3400CA97C2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C0791D34EF7500158186 /* CoreMedia.framework */; };
 		6D0064431D34FB3E00CA97C2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C07B1D34EF7C00158186 /* AudioToolbox.framework */; };
@@ -18,7 +19,7 @@
 		6D00644A1D34FB6A00CA97C2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0BBC51D33A63C00158186 /* libz.tbd */; };
 		6D00644B1D34FB7300CA97C2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0BBC11D33A62B00158186 /* libsqlite3.tbd */; };
 		6D00644C1D34FBD500CA97C2 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0BBC71D33A64400158186 /* libiconv.tbd */; };
-		6D5D44F61D3E24BF00FA5212 /* NetWorkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D44F51D3E24BF00FA5212 /* NetWorkWrapper.swift */; };
+		6D5D44F61D3E24BF00FA5212 /* NetWorkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D44F51D3E24BF00FA5212 /* NetWorkHandler.swift */; };
 		6D5D44FA1D3E344100FA5212 /* BaseNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D44F91D3E344100FA5212 /* BaseNetTask.swift */; };
 		6D6955371D363467001AC1CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6955361D363467001AC1CB /* LoginViewController.swift */; };
 		6D6955391D37322F001AC1CB /* KeyboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6955381D37322F001AC1CB /* KeyboardMonitor.swift */; };
@@ -175,11 +176,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F27C8431D547B8100AA8987 /* TestNetTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNetTask.swift; sourceTree = "<group>"; };
 		1ED37DA0CFBA7B450475E064 /* Pods-FindFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0BB63168208FE9C94DBADD /* Pods_FindFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0064471D34FB5D00CA97C2 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6D52031A1D34F86100FEC17F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		6D5D44F51D3E24BF00FA5212 /* NetWorkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkWrapper.swift; sourceTree = "<group>"; };
+		6D5D44F51D3E24BF00FA5212 /* NetWorkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkHandler.swift; sourceTree = "<group>"; };
 		6D5D44F91D3E344100FA5212 /* BaseNetTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetTask.swift; sourceTree = "<group>"; };
 		6D6955361D363467001AC1CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D6955381D37322F001AC1CB /* KeyboardMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMonitor.swift; sourceTree = "<group>"; };
@@ -628,7 +630,8 @@
 				6DD0BC001D34E29200158186 /* ProfileConstant.swift */,
 				6D69553A1D37328F001AC1CB /* ConfigDataContainer.swift */,
 				6D6955681D377E8A001AC1CB /* FriendInfo.swift */,
-				6D5D44F51D3E24BF00FA5212 /* NetWorkWrapper.swift */,
+				0F27C8431D547B8100AA8987 /* TestNetTask.swift */,
+				6D5D44F51D3E24BF00FA5212 /* NetWorkHandler.swift */,
 				6D5D44F91D3E344100FA5212 /* BaseNetTask.swift */,
 			);
 			name = Data;
@@ -1560,6 +1563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F27C8441D547B8100AA8987 /* TestNetTask.swift in Sources */,
 				6D6E47661D34FF700042BBCD /* EaseEmotionEscape.m in Sources */,
 				6D6955391D37322F001AC1CB /* KeyboardMonitor.swift in Sources */,
 				6D6E47541D34FF700042BBCD /* PSTGridLayoutItem.m in Sources */,
@@ -1583,7 +1587,7 @@
 				6D6E47121D34FF700042BBCD /* EMCDDeviceManager+Media.m in Sources */,
 				6D6E47811D34FF700042BBCD /* EaseFacialView.m in Sources */,
 				6D6E47171D34FF700042BBCD /* amrFileCodec.mm in Sources */,
-				6D5D44F61D3E24BF00FA5212 /* NetWorkWrapper.swift in Sources */,
+				6D5D44F61D3E24BF00FA5212 /* NetWorkHandler.swift in Sources */,
 				6D6E475E1D34FF700042BBCD /* NSString+Valid.m in Sources */,
 				6D69554E1D373DE7001AC1CB /* DJCommonStyle.swift in Sources */,
 				6D6E47771D34FF700042BBCD /* EaseBubbleView+Location.m in Sources */,
@@ -1837,6 +1841,7 @@
 					"$(PROJECT_DIR)/FindFriends/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/FindFriends/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = JQ.FindFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -47,15 +47,10 @@ class MainViewController: BasicViewController {
                 fake1.name = "Sunny Jiao"
                 fake1.careerInfo = "Supply Chain"
                 fake1.isFemale = true
-                fake1.imageUrl = "http://beauty.pclady.com.cn/sszr/0601/pic/20060117_bb_9.jpg"
+             //   fake1.imageUrl = "http://beauty.pclady.com.cn/sszr/0601/pic/20060117_bb_9.jpg"
                 
-                let fake2 = FriendInfo()
-                fake2.name = "Wong Xuan"
-                fake2.careerInfo = "Sales, now reading a MBA"
-                fake2.isFemale = true
-                fake2.imageUrl = "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"
                 
-                self.recommendFriends = [fake1, fake2, fake1]
+                self.recommendFriends = [fake1, fake1]
                 self.buildRecommendView()
             })
         })
@@ -123,9 +118,28 @@ class MainViewController: BasicViewController {
 
 extension MainViewController : EMContactManagerDelegate, RecommendCardViewDelegate {
     func recommendCardViewDidClickSay(recommendCardView: RecommendCardView) {
-        let chatVC = ChatViewController(conversationChatter: "002", conversationType: EMConversationTypeChat)
-        chatVC.friendName = "002"
-        self.navigationController?.pushViewController(chatVC, animated: true)
+//        let chatVC = ChatViewController(conversationChatter: "002", conversationType: EMConversationTypeChat)
+//        chatVC.friendName = "002"
+//        self.navigationController?.pushViewController(chatVC, animated: true)
+        
+        let one = TestNetTask()
+        one.success = {(task : NSURLSessionDataTask, responseObject : AnyObject?) -> Void in
+            do {
+                let data = responseObject as! NSData
+                let jsonObject = NSString(data: data, encoding: NSUTF8StringEncoding)
+                 print("json: \(jsonObject)")
+                // use jsonObject here
+            } catch {
+                print("json error")
+            }
+            
+        }
+        one.failed = {(task : NSURLSessionDataTask?, error : NSError) -> Void in
+                print("failed")
+                print(error.description)
+        }
+        
+        NetWorkHandler.sharedInstance.sendNetTask(one)
     }
     
     func didReceiveFriendInvitationFromUsername(aUsername: String!, message aMessage: String!) {

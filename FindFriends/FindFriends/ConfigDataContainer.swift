@@ -57,12 +57,12 @@ class ConfigDataContainer: NSObject
                 handler(info)
             }else{
                 //send nettask
-                let fake1 = FriendInfo()
-                fake1.name = "Sunny Jiao"
-                fake1.careerInfo = "Supply Chain"
-                fake1.isFemale = true
-                fake1.imageUrl = "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"
-                handler(fake1)
+//                let fake1 = FriendInfo()
+//                fake1.name = "Sunny Jiao"
+//                fake1.careerInfo = "Supply Chain"
+//                fake1.isFemale = true
+//                fake1.imageUrl = "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"
+//                handler(fake1)
             }
         }
         getCachedFriendInfoById(id, handlerWarpper)
