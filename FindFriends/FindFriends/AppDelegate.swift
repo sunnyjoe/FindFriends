@@ -17,17 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
  
-        let options = EMOptions(appkey: easemobAppKey)
-        options.apnsCertName = easemobApnsCertName
-        EMClient.sharedClient().initializeSDKWithOptions(options)
-        
+//        let options = EMOptions(appkey: easemobAppKey)
+//        options.apnsCertName = easemobApnsCertName
+//        EMClient.sharedClient().initializeSDKWithOptions(options)
+//        
         window!.rootViewController = LoginViewController()
         window!.makeKeyWindow()
 
-        let error = EMClient.sharedClient().loginWithUsername("001", password: "001")
-        if (error == nil) {
-            print("login ok")
-        }
+//        let error = EMClient.sharedClient().loginWithUsername("001", password: "001")
+//        if (error == nil) {
+//            print("login ok")
+//        }
         
         return true
     }

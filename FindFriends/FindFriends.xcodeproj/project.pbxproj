@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F27C8441D547B8100AA8987 /* TestNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F27C8431D547B8100AA8987 /* TestNetTask.swift */; };
-		2B6A706F0386AE18BA4D82F7 /* Pods_FindFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0BB63168208FE9C94DBADD /* Pods_FindFriends.framework */; };
 		6D0064421D34FB3400CA97C2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C0791D34EF7500158186 /* CoreMedia.framework */; };
 		6D0064431D34FB3E00CA97C2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C07B1D34EF7C00158186 /* AudioToolbox.framework */; };
 		6D0064441D34FB4400CA97C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C07D1D34EF8400158186 /* AVFoundation.framework */; };
@@ -184,12 +183,11 @@
 		6DD0BBEE1D33AF6600158186 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DD0BBED1D33AF6600158186 /* Info.plist */; };
 		6DD0BBF81D33AFBA00158186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD0BBF41D33AFBA00158186 /* LaunchScreen.storyboard */; };
 		6DD0BBF91D33AFBA00158186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD0BBF61D33AFBA00158186 /* Main.storyboard */; };
+		804468556F0015D0B069A3B1 /* Pods_FindFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F640B3CED1D3CE8B6AE3E9C /* Pods_FindFriends.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F27C8431D547B8100AA8987 /* TestNetTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNetTask.swift; sourceTree = "<group>"; };
-		1ED37DA0CFBA7B450475E064 /* Pods-FindFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends.debug.xcconfig"; sourceTree = "<group>"; };
-		4A0BB63168208FE9C94DBADD /* Pods_FindFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0064471D34FB5D00CA97C2 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6D52031A1D34F86100FEC17F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6D5D44F51D3E24BF00FA5212 /* NetWorkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkHandler.swift; sourceTree = "<group>"; };
@@ -558,7 +556,9 @@
 		6DD0C07D1D34EF8400158186 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6DD0C07F1D34EF9700158186 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6DD0C0811D34EFCF00158186 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		CFBF5B551E331175B550231A /* Pods-FindFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends.release.xcconfig"; sourceTree = "<group>"; };
+		9F640B3CED1D3CE8B6AE3E9C /* Pods_FindFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1720E2DB864525ED171E1A9 /* Pods-FindFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends.release.xcconfig"; sourceTree = "<group>"; };
+		FDC8695B20C4CE1392C29588 /* Pods-FindFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -584,7 +584,7 @@
 				6D0064431D34FB3E00CA97C2 /* AudioToolbox.framework in Frameworks */,
 				6D6E471A1D34FF700042BBCD /* libopencore-amrnb.a in Frameworks */,
 				6D0064421D34FB3400CA97C2 /* CoreMedia.framework in Frameworks */,
-				2B6A706F0386AE18BA4D82F7 /* Pods_FindFriends.framework in Frameworks */,
+				804468556F0015D0B069A3B1 /* Pods_FindFriends.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1401,7 +1401,7 @@
 				6DD0BBF21D33AF8500158186 /* Resource */,
 				6DC6C8CE1D333A8E003F7787 /* Products */,
 				7B0D4C9C0816F4B128A63821 /* Frameworks */,
-				EDFFFF523429E181540074A2 /* Pods */,
+				A9523BE4E609CDD55AF771AA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1468,16 +1468,16 @@
 				6DD0BBC11D33A62B00158186 /* libsqlite3.tbd */,
 				6DD0BBBF1D33A61200158186 /* CFNetwork.framework */,
 				6DD0BBBD1D33A60200158186 /* MobileCoreServices.framework */,
-				4A0BB63168208FE9C94DBADD /* Pods_FindFriends.framework */,
+				9F640B3CED1D3CE8B6AE3E9C /* Pods_FindFriends.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EDFFFF523429E181540074A2 /* Pods */ = {
+		A9523BE4E609CDD55AF771AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1ED37DA0CFBA7B450475E064 /* Pods-FindFriends.debug.xcconfig */,
-				CFBF5B551E331175B550231A /* Pods-FindFriends.release.xcconfig */,
+				FDC8695B20C4CE1392C29588 /* Pods-FindFriends.debug.xcconfig */,
+				B1720E2DB864525ED171E1A9 /* Pods-FindFriends.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1495,7 +1495,6 @@
 				6DC6C8CB1D333A8D003F7787 /* Resources */,
 				2A3938E719CA74C9F275654E /* [CP] Embed Pods Frameworks */,
 				B49E1397D5AF8EAE9E6AE76C /* [CP] Copy Pods Resources */,
-				E25C2A81ADE4103CE37D5E41 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1602,21 +1601,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E25C2A81ADE4103CE37D5E41 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindFriends/Pods-FindFriends-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1890,7 +1874,7 @@
 		};
 		6DC6C8E01D333A8E003F7787 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ED37DA0CFBA7B450475E064 /* Pods-FindFriends.debug.xcconfig */;
+			baseConfigurationReference = FDC8695B20C4CE1392C29588 /* Pods-FindFriends.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1916,7 +1900,7 @@
 					"$(PROJECT_DIR)/FindFriends/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = JQ.FindFriends;
+				PRODUCT_BUNDLE_IDENTIFIER = xuran.jiaoqing.findfriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -1927,12 +1911,12 @@
 		};
 		6DC6C8E11D333A8E003F7787 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFBF5B551E331175B550231A /* Pods-FindFriends.release.xcconfig */;
+			baseConfigurationReference = B1720E2DB864525ED171E1A9 /* Pods-FindFriends.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: jiao qing (NW4B2RFZ4C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: jiao qing (NW4B2RFZ4C)";
 				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
@@ -1952,9 +1936,9 @@
 					"$(PROJECT_DIR)/FindFriends/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/FindFriends/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JQ.FindFriends;
+				PRODUCT_BUNDLE_IDENTIFIER = xuran.jiaoqing.findfriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8911ec45-afc0-4ee9-bbe7-8b94f33ce284";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FindFriends/FindFriends-Bridging-Header.h";
 			};

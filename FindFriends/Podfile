@@ -9,5 +9,4 @@ target 'FindFriends' do
     pod 'SwiftyJSON'
     pod 'Cartography'
     pod 'FMDB/standalone'
-    pod 'AFNetworking'
 end
