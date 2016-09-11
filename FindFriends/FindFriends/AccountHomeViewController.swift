@@ -27,7 +27,7 @@ class AccountHomeViewController: BasicViewController {
         view.backgroundColor = UIColor.whiteColor()
         
         title = "Profile"
-        profileView.frame = CGRectMake(0, 0, view.frame.size.width, 160)
+        profileView.frame = CGRectMake(0, 0, view.frame.size.width, 170)
         view.addSubview(profileView)
         profileView.backgroundColor = UIColor.whiteColor()
         profileView.addSubview(photoImageView)
@@ -56,22 +56,29 @@ class AccountHomeViewController: BasicViewController {
             nameLabel.left == nameLabel.superview!.left
             nameLabel.right == nameLabel.superview!.right
         }
-        if let url = NSURL(string : "http://hairstylefoto.com/wp-content/uploads/parser/asian-boy-hairstyle-1.jpg"){
+        if let url = NSURL(string : "https://thumbs.dreamstime.com/z/asian-girl-tennis-racket-1729083.jpg"){
             photoImageView.sd_setImageWithURL(url)
         }
-        nameLabel.withText("Sunny Bella")
+        nameLabel.withText("Sunny Jiao")
         
         profileView.addBorder()
         
         var oy : CGFloat = 200
-        addContactUsLabel(oy)
+        
+        addMoreLabel(oy, "Link Her")
+        
+        oy += 30
+        addMoreLabel(oy, "Recent Activities")
+        
+        oy += 30
+        addMoreLabel(oy, "Common Links")
     }
     
     
     
-    func addContactUsLabel(oy : CGFloat) {
-        let label = UILabel().withText("Contact Us").withTextColor(DJCommonStyle.BackgroundColor).withFontHeletica(16).textCentered()
-        label.frame = CGRectMake(0, oy, view.frame.width, 50)
+    func addMoreLabel(oy : CGFloat, _ text : String) {
+        let label = UILabel().withText(text).withTextColor(DJCommonStyle.BackgroundColor).withFontHeletica(16)
+        label.frame = CGRectMake(30, oy, view.frame.width - 30 * 2, 50)
         view.addSubview(label)
     }
     

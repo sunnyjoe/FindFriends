@@ -26,7 +26,7 @@ class MenuWindow: UIWindow {
         let handler = {(info : FriendInfo?) -> Void in
             dispatch_async(dispatch_get_main_queue(), {
                 let fake1 = FriendInfo()
-                fake1.name = "Sunny Jiao"
+                fake1.name = "Xu Ran"
                 fake1.careerInfo = "Supply Chain"
                 fake1.selfIntroduction = "Seeking God's love"
                 fake1.isFemale = true
@@ -38,6 +38,28 @@ class MenuWindow: UIWindow {
         
         ConfigDataContainer.sharedInstance.getMyInfo(handler)
         
+        var oy : CGFloat = 150
+        addMoreLabel(oy, "My Links")
+        
+        oy += 30
+        addMoreLabel(oy, "Meet")
+        
+        oy += 30
+        addMoreLabel(oy, "Activities")
+        
+        oy += 30
+        addMoreLabel(oy, "Recent")
+        
+        oy += 30
+        addMoreLabel(oy, "Setting")
+    }
+    
+    
+    
+    func addMoreLabel(oy : CGFloat, _ text : String) {
+        let label = UILabel().withText(text).withTextColor(UIColor.whiteColor()).withFontHeletica(16)
+        label.frame = CGRectMake(20, oy, 200, 50)
+        addSubview(label)
     }
     
     func buildHeaderView(info : FriendInfo?){

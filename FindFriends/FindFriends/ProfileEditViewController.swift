@@ -84,6 +84,7 @@ class ProfileEditViewController: UIViewController, ZESegmentedsViewDelegate {
         let birtf = UITextField(frame: CGRectMake(CGRectGetMaxX(birhLabel.frame), birhLabel.frame.origin.y, 80, birhLabel.frame.size.height))
         conv.addSubview(birtf)
         birtf.addBorder()
+        birtf.enabled = false
         birtf.placeholder = placeHolder
     }
     

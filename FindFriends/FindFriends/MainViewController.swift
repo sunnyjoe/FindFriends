@@ -106,7 +106,7 @@ class MainViewController: BasicViewController {
             }
         }
         
-        let message = "Please permit us access your access book"
+        let message = "Please permit us access your address book"
         let alertView = DJAlertView(title: "Dear", message: message, cancelButtonTitle: "Deny", otherButtonTitles: ["Allow"], onDismiss: disBlock, onCancel: {() -> Void in
         })
         alertView.show()
