@@ -9,9 +9,10 @@
 #import "BasicViewController.h"
 #import "FindFriends-swift.h"
 
-@interface BasicViewController ()
+@interface BasicViewController () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIBarButtonItem *backBar;
+@property (nonatomic, strong) UIButton *backView;
 @end
 
 @implementation BasicViewController
@@ -51,6 +52,23 @@
 -(void)setTitle:(NSString *)title{
     self.titleLabel.text = title;
     [self.titleLabel sizeToFit];
+}
+
+-(void)addWhiteBackButton{
+    UIControl *backControl = [[UIControl alloc] initWithFrame:CGRectMake(0, 0, 33, 44.0f)];
+    [self.backView addSubview:backControl];
+    [backControl addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 13, 23, 19);
+    [backButton setImage:[UIImage imageNamed:@"WhiteBackIconNormal"] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.backView addSubview:backButton];
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.backView];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 -(UIBarButtonItem *)backBar{

@@ -41,6 +41,16 @@
 		6D6955691D377E8A001AC1CB /* FriendInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6955681D377E8A001AC1CB /* FriendInfo.swift */; };
 		6D69556D1D3782C4001AC1CB /* RecommendCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69556C1D3782C4001AC1CB /* RecommendCardView.swift */; };
 		6D69556F1D387C2A001AC1CB /* DatabaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69556E1D387C2A001AC1CB /* DatabaseUtil.swift */; };
+		6D6BADFC1D7D487D00CA0C1D /* ZESegmentedsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BADF91D7D487D00CA0C1D /* ZESegmentedsView.m */; };
+		6D6BADFD1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BADFB1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.m */; };
+		6D6BADFF1D7D4DD600CA0C1D /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BADFE1D7D4DD600CA0C1D /* ContentViewController.swift */; };
+		6D6BAE011D7D4FEE00CA0C1D /* AlphabetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE001D7D4FEE00CA0C1D /* AlphabetTableView.swift */; };
+		6D6BAE061D7D515300CA0C1D /* DJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE031D7D515300CA0C1D /* DJAlertView.m */; };
+		6D6BAE071D7D515300CA0C1D /* DJAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE051D7D515300CA0C1D /* DJAlertView+Block.m */; };
+		6D6BAE0A1D7D51E000CA0C1D /* DJFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE091D7D51E000CA0C1D /* DJFont.m */; };
+		6D6BAE0D1D7D51F400CA0C1D /* UIColor+MOAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE0C1D7D51F400CA0C1D /* UIColor+MOAdditions.m */; };
+		6D6BAE101D7D520400CA0C1D /* UIImage+Mozat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE0F1D7D520400CA0C1D /* UIImage+Mozat.m */; };
+		6D6BAE121D7D5A1300CA0C1D /* AccountHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BAE111D7D5A1300CA0C1D /* AccountHomeViewController.swift */; };
 		6D6E42921D34FCCF0042BBCD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC6C8D21D333A8E003F7787 /* MainViewController.swift */; };
 		6D6E42931D34FCCF0042BBCD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0BBFC1D33AFF200158186 /* ChatViewController.swift */; };
 		6D6E42941D34FCCF0042BBCD /* ProfileConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0BC001D34E29200158186 /* ProfileConstant.swift */; };
@@ -169,6 +179,7 @@
 		6D6E47EB1D34FFF10042BBCD /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6E47E71D34FFF10042BBCD /* libcurl.a */; };
 		6D6E47EC1D34FFF10042BBCD /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6E47E81D34FFF10042BBCD /* libssl.a */; };
 		6D6E47ED1D34FFF10042BBCD /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6E47E91D34FFF10042BBCD /* libHyphenateSDK.a */; };
+		6D8B5E511D7D297C0055DDCD /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B5E501D7D297C0055DDCD /* ProfileEditViewController.swift */; };
 		6DC6C8D11D333A8E003F7787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC6C8D01D333A8E003F7787 /* AppDelegate.swift */; };
 		6DD0BBEE1D33AF6600158186 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DD0BBED1D33AF6600158186 /* Info.plist */; };
 		6DD0BBF81D33AFBA00158186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD0BBF41D33AFBA00158186 /* LaunchScreen.storyboard */; };
@@ -210,6 +221,23 @@
 		6D6955681D377E8A001AC1CB /* FriendInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInfo.swift; sourceTree = "<group>"; };
 		6D69556C1D3782C4001AC1CB /* RecommendCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCardView.swift; sourceTree = "<group>"; };
 		6D69556E1D387C2A001AC1CB /* DatabaseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtil.swift; sourceTree = "<group>"; };
+		6D6BADF81D7D487D00CA0C1D /* ZESegmentedsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZESegmentedsView.h; sourceTree = "<group>"; };
+		6D6BADF91D7D487D00CA0C1D /* ZESegmentedsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZESegmentedsView.m; sourceTree = "<group>"; };
+		6D6BADFA1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZESegmentedsViewSingleton.h; sourceTree = "<group>"; };
+		6D6BADFB1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZESegmentedsViewSingleton.m; sourceTree = "<group>"; };
+		6D6BADFE1D7D4DD600CA0C1D /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		6D6BAE001D7D4FEE00CA0C1D /* AlphabetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetTableView.swift; sourceTree = "<group>"; };
+		6D6BAE021D7D515300CA0C1D /* DJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJAlertView.h; sourceTree = "<group>"; };
+		6D6BAE031D7D515300CA0C1D /* DJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJAlertView.m; sourceTree = "<group>"; };
+		6D6BAE041D7D515300CA0C1D /* DJAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DJAlertView+Block.h"; sourceTree = "<group>"; };
+		6D6BAE051D7D515300CA0C1D /* DJAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DJAlertView+Block.m"; sourceTree = "<group>"; };
+		6D6BAE081D7D51E000CA0C1D /* DJFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJFont.h; sourceTree = "<group>"; };
+		6D6BAE091D7D51E000CA0C1D /* DJFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJFont.m; sourceTree = "<group>"; };
+		6D6BAE0B1D7D51F400CA0C1D /* UIColor+MOAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MOAdditions.h"; sourceTree = "<group>"; };
+		6D6BAE0C1D7D51F400CA0C1D /* UIColor+MOAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MOAdditions.m"; sourceTree = "<group>"; };
+		6D6BAE0E1D7D520400CA0C1D /* UIImage+Mozat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mozat.h"; sourceTree = "<group>"; };
+		6D6BAE0F1D7D520400CA0C1D /* UIImage+Mozat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mozat.m"; sourceTree = "<group>"; };
+		6D6BAE111D7D5A1300CA0C1D /* AccountHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHomeViewController.swift; sourceTree = "<group>"; };
 		6D6E45EA1D34FF700042BBCD /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		6D6E45EB1D34FF700042BBCD /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
 		6D6E45F01D34FF700042BBCD /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
@@ -507,6 +535,7 @@
 		6D6E47E71D34FFF10042BBCD /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
 		6D6E47E81D34FFF10042BBCD /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		6D6E47E91D34FFF10042BBCD /* libHyphenateSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateSDK.a; sourceTree = "<group>"; };
+		6D8B5E501D7D297C0055DDCD /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		6DC6C8CD1D333A8E003F7787 /* FindFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC6C8D01D333A8E003F7787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC6C8D21D333A8E003F7787 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -562,6 +591,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D2C2BD91D7D2E2A00311EAE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				6D6BADF71D7D487D00CA0C1D /* ZESementeds */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
 		6D6955341D3624A5001AC1CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,8 +653,11 @@
 			isa = PBXGroup;
 			children = (
 				6D6955361D363467001AC1CB /* LoginViewController.swift */,
+				6D8B5E501D7D297C0055DDCD /* ProfileEditViewController.swift */,
 				6D6955381D37322F001AC1CB /* KeyboardMonitor.swift */,
+				6D6BADFE1D7D4DD600CA0C1D /* ContentViewController.swift */,
 				6D69555F1D375AEE001AC1CB /* MenuWindow.swift */,
+				6D6BAE111D7D5A1300CA0C1D /* AccountHomeViewController.swift */,
 				6D6955471D373B7A001AC1CB /* View */,
 			);
 			name = Account;
@@ -640,6 +680,7 @@
 		6D6955471D373B7A001AC1CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6D6BAE001D7D4FEE00CA0C1D /* AlphabetTableView.swift */,
 				6D6955481D373B96001AC1CB /* ScollSelectorView.swift */,
 			);
 			name = View;
@@ -677,6 +718,27 @@
 				6D69556C1D3782C4001AC1CB /* RecommendCardView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		6D6BADF71D7D487D00CA0C1D /* ZESementeds */ = {
+			isa = PBXGroup;
+			children = (
+				6D6BAE0B1D7D51F400CA0C1D /* UIColor+MOAdditions.h */,
+				6D6BAE0C1D7D51F400CA0C1D /* UIColor+MOAdditions.m */,
+				6D6BAE081D7D51E000CA0C1D /* DJFont.h */,
+				6D6BAE091D7D51E000CA0C1D /* DJFont.m */,
+				6D6BADF81D7D487D00CA0C1D /* ZESegmentedsView.h */,
+				6D6BADF91D7D487D00CA0C1D /* ZESegmentedsView.m */,
+				6D6BAE0E1D7D520400CA0C1D /* UIImage+Mozat.h */,
+				6D6BAE0F1D7D520400CA0C1D /* UIImage+Mozat.m */,
+				6D6BADFA1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.h */,
+				6D6BADFB1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.m */,
+				6D6BAE021D7D515300CA0C1D /* DJAlertView.h */,
+				6D6BAE031D7D515300CA0C1D /* DJAlertView.m */,
+				6D6BAE041D7D515300CA0C1D /* DJAlertView+Block.h */,
+				6D6BAE051D7D515300CA0C1D /* DJAlertView+Block.m */,
+			);
+			path = ZESementeds;
 			sourceTree = "<group>";
 		};
 		6D6E45E91D34FF700042BBCD /* EaseUI */ = {
@@ -1354,6 +1416,7 @@
 		6DC6C8CF1D333A8E003F7787 /* FindFriends */ = {
 			isa = PBXGroup;
 			children = (
+				6D2C2BD91D7D2E2A00311EAE /* Libs */,
 				6D69553C1D3733AE001AC1CB /* Utils */,
 				6D6955341D3624A5001AC1CB /* Modules */,
 				6D6E47BC1D34FFF10042BBCD /* HyphenateSDK */,
@@ -1570,6 +1633,8 @@
 				6D6E470F1D34FF700042BBCD /* EaseUI.m in Sources */,
 				6D6E47101D34FF700042BBCD /* EMAudioPlayerUtil.m in Sources */,
 				6D6E476C1D34FF700042BBCD /* EaseRefreshTableViewController.m in Sources */,
+				6D6BAE071D7D515300CA0C1D /* DJAlertView+Block.m in Sources */,
+				6D8B5E511D7D297C0055DDCD /* ProfileEditViewController.swift in Sources */,
 				6D6E47141D34FF700042BBCD /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				6D6E474E1D34FF700042BBCD /* PSTCollectionViewData.m in Sources */,
 				6D6E47111D34FF700042BBCD /* EMAudioRecorderUtil.m in Sources */,
@@ -1577,6 +1642,7 @@
 				6D6E477D1D34FF700042BBCD /* EaseChatToolbarItem.m in Sources */,
 				6D6E47821D34FF700042BBCD /* EaseChatBarMoreView.m in Sources */,
 				6D6E47191D34FF700042BBCD /* EMVoiceConverter.mm in Sources */,
+				6D6BADFD1D7D487D00CA0C1D /* ZESegmentedsViewSingleton.m in Sources */,
 				6D6E47381D34FF700042BBCD /* MWZoomingScrollView.m in Sources */,
 				6D6E47241D34FF700042BBCD /* MJRefreshAutoNormalFooter.m in Sources */,
 				6D6E473F1D34FF700042BBCD /* EMSDWebImageManager.m in Sources */,
@@ -1604,8 +1670,10 @@
 				6D6E42931D34FCCF0042BBCD /* ChatViewController.swift in Sources */,
 				6D69553F1D3733D7001AC1CB /* ViewExtensions.swift in Sources */,
 				6D6E475D1D34FF700042BBCD /* NSDateFormatter+Category.m in Sources */,
+				6D6BADFF1D7D4DD600CA0C1D /* ContentViewController.swift in Sources */,
 				6D6E47721D34FF700042BBCD /* EaseMessageCell.m in Sources */,
 				6D6E476B1D34FF700042BBCD /* EaseMessageViewController.m in Sources */,
+				6D6BADFC1D7D487D00CA0C1D /* ZESegmentedsView.m in Sources */,
 				6D6E47251D34FF700042BBCD /* MJRefreshAutoStateFooter.m in Sources */,
 				6D6E47651D34FF700042BBCD /* EaseEmojiEmoticons.m in Sources */,
 				6D6E47731D34FF700042BBCD /* EaseMessageTimeCell.m in Sources */,
@@ -1615,6 +1683,7 @@
 				6D6E47581D34FF700042BBCD /* EaseSDKHelper.m in Sources */,
 				6D6E473B1D34FF700042BBCD /* EMSDWebImageCompat.m in Sources */,
 				6D6955541D373FDF001AC1CB /* DJButton.m in Sources */,
+				6D6BAE011D7D4FEE00CA0C1D /* AlphabetTableView.swift in Sources */,
 				6D6E47391D34FF700042BBCD /* DACircularProgressView.m in Sources */,
 				6D6E47631D34FF700042BBCD /* EaseMessageReadManager.m in Sources */,
 				6D6E47311D34FF700042BBCD /* MWCaptionView.m in Sources */,
@@ -1630,6 +1699,7 @@
 				6D6E47201D34FF700042BBCD /* MJRefreshComponent.m in Sources */,
 				6D6E47151D34FF700042BBCD /* EMCDDeviceManager+Remind.m in Sources */,
 				6D5D44FA1D3E344100FA5212 /* BaseNetTask.swift in Sources */,
+				6D6BAE121D7D5A1300CA0C1D /* AccountHomeViewController.swift in Sources */,
 				6D6E47431D34FF700042BBCD /* UIButton+EMWebCache.m in Sources */,
 				6D6E47181D34FF700042BBCD /* wav.mm in Sources */,
 				6D6E471F1D34FF700042BBCD /* MJRefreshBackFooter.m in Sources */,
@@ -1640,14 +1710,17 @@
 				6D6E47341D34FF700042BBCD /* MWPhoto.m in Sources */,
 				6D69556F1D387C2A001AC1CB /* DatabaseUtil.swift in Sources */,
 				6D6E47671D34FF700042BBCD /* EaseEmotionManager.m in Sources */,
+				6D6BAE0D1D7D51F400CA0C1D /* UIColor+MOAdditions.m in Sources */,
 				6D6955491D373B96001AC1CB /* ScollSelectorView.swift in Sources */,
 				6D6E47551D34FF700042BBCD /* PSTGridLayoutRow.m in Sources */,
+				6D6BAE101D7D520400CA0C1D /* UIImage+Mozat.m in Sources */,
 				6D6E47561D34FF700042BBCD /* PSTGridLayoutSection.m in Sources */,
 				6D6E475C1D34FF700042BBCD /* NSDate+Category.m in Sources */,
 				6D6E47291D34FF700042BBCD /* MJRefreshGifHeader.m in Sources */,
 				6D6E47611D34FF700042BBCD /* EaseChineseToPinyin.m in Sources */,
 				6D6E47331D34FF700042BBCD /* MWGridViewController.m in Sources */,
 				6D6E47261D34FF700042BBCD /* MJRefreshBackGifFooter.m in Sources */,
+				6D6BAE0A1D7D51E000CA0C1D /* DJFont.m in Sources */,
 				6D6955421D37385D001AC1CB /* UIFont+Custom.m in Sources */,
 				6D6E47471D34FF700042BBCD /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				6D6E47801D34FF700042BBCD /* EaseFaceView.m in Sources */,
@@ -1696,6 +1769,7 @@
 				6D6E47741D34FF700042BBCD /* EaseBubbleView+File.m in Sources */,
 				6D6E475A1D34FF700042BBCD /* EaseMessageModel.m in Sources */,
 				6D6E47841D34FF700042BBCD /* EaseConversationCell.m in Sources */,
+				6D6BAE061D7D515300CA0C1D /* DJAlertView.m in Sources */,
 				6D6E47691D34FF700042BBCD /* EaseConversationListViewController.m in Sources */,
 				6D69553B1D37328F001AC1CB /* ConfigDataContainer.swift in Sources */,
 				6D6E477B1D34FF700042BBCD /* EaseBubbleView.m in Sources */,

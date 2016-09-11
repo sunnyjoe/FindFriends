@@ -9,6 +9,8 @@
 import UIKit
 
 class MainViewController: BasicViewController {
+    let nextBtn = UIButton()
+    
     private lazy var homeBarItem : UIBarButtonItem = {
         let btn = UIButton.init(type: .Custom)
         btn.setImage(UIImage(named: "MenuIcon"), forState: .Normal)
@@ -66,12 +68,12 @@ class MainViewController: BasicViewController {
         view.backgroundColor = UIColor.whiteColor()
         
         title = "Find Friend"
-//        
-//        let chatButton = UIButton(frame : CGRectMake(30, 100, 100 , 40))
-//        // view.addSubview(chatButton)
-//        chatButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-//        chatButton.addTarget(self, action: #selector(gotoChatView), forControlEvents: .TouchUpInside)
-//        chatButton.setTitle("Chat", forState: .Normal)
+        //
+        //        let chatButton = UIButton(frame : CGRectMake(30, 100, 100 , 40))
+        //        // view.addSubview(chatButton)
+        //        chatButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        //        chatButton.addTarget(self, action: #selector(gotoChatView), forControlEvents: .TouchUpInside)
+        //        chatButton.setTitle("Chat", forState: .Normal)
         
         //        var newError : EMError?
         //        let userList = EMClient.sharedClient().contactManager.getContactsFromServerWithError(&newError)
@@ -81,13 +83,35 @@ class MainViewController: BasicViewController {
         //        EMClient.sharedClient().contactManager.addContact("002", message: "Add Friend")
         //        EMClient.sharedClient().contactManager.addDelegate(self, delegateQueue: nil)
         
-        recommendScrollView.frame = CGRectMake(0, 0, view.frame.size.width, UIScreen.mainScreen().bounds.size.height - 64 - 150)
-        view.addSubview(recommendScrollView)
+        recommendScrollView.frame = CGRectMake(0, 0, view.frame.size.width, UIScreen.mainScreen().bounds.size.height - 64 - 100)
         recommendScrollView.showsHorizontalScrollIndicator = false
         recommendScrollView.pagingEnabled = true
         
-        self.buildRecommendView()
+        
+        nextBtn.frame = CGRectMake(50, 100, view.frame.size.width - 50 * 2, 30)
+        view.addSubview(nextBtn)
+        nextBtn.layer.borderWidth = 1
+        nextBtn.layer.borderColor = UIColor.defaultBlack().CGColor
+        nextBtn.withTitleColor(UIColor.defaultBlack())
+        nextBtn.withTitle("Start make new friends!")
+        nextBtn.addTarget(self, action: #selector(seekBtnDidClicked(_:)), forControlEvents: .TouchUpInside)
     }
+    
+    func seekBtnDidClicked(btn : UIButton){
+        let disBlock : DismissBlock = {(btnIndex : Int32) -> Void in
+            if btnIndex == 0 {
+                self.view.addSubview(self.recommendScrollView)
+                self.buildRecommendView()
+                self.nextBtn.removeFromSuperview()
+            }
+        }
+        
+        let message = "Please permit us access your access book"
+        let alertView = DJAlertView(title: "Dear", message: message, cancelButtonTitle: "Deny", otherButtonTitles: ["Allow"], onDismiss: disBlock, onCancel: {() -> Void in
+        })
+        alertView.show()
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -117,6 +141,10 @@ class MainViewController: BasicViewController {
 }
 
 extension MainViewController : EMContactManagerDelegate, RecommendCardViewDelegate {
+    func recommendCardViewDidUser(recommendCardView: RecommendCardView) {
+         self.navigationController?.pushViewController(AccountHomeViewController(), animated: true)
+    }
+    
     func recommendCardViewDidClickSay(recommendCardView: RecommendCardView) {
 //        let chatVC = ChatViewController(conversationChatter: "002", conversationType: EMConversationTypeChat)
 //        chatVC.friendName = "002"
