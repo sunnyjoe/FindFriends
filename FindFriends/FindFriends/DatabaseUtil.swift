@@ -194,12 +194,12 @@ private class Database : NSObject {
         let fileManager = NSFileManager.defaultManager()
         let documents = try! fileManager.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
         let fileURL = documents.URLByAppendingPathComponent(name + ".db")
-        fmDatabase = FMDatabase(path: fileURL.path)
+        fmDatabase = FMDatabase(path: fileURL!.path)
         
         if !fmDatabase.open() {
             print("Unable to open database")
             fmDatabase.close()
-            if let path = fileURL.path {
+            if let path = fileURL!.path {
                 do {
                     try fileManager.removeItemAtPath(path)
                     print("delete database file success")

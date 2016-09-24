@@ -8,8 +8,17 @@
 
 import UIKit
 
+protocol MenuWindowDelegate : NSObjectProtocol{
+    func menuWindowDidClickNearby(menuWindow : MenuWindow)
+    func menuWindowDidClickActivity(menuWindow : MenuWindow)
+    func menuWindowDidClickSetting(menuWindow : MenuWindow)
+    
+}
+
 class MenuWindow: UIWindow {
     let headerView = UIView(frame : CGRectMake(0, 0, 200, 200))
+    
+    weak var delegate : MenuWindowDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,24 +50,37 @@ class MenuWindow: UIWindow {
         var oy : CGFloat = 150
         addMoreLabel(oy, "My Links")
         
-        oy += 30
-        addMoreLabel(oy, "Meet")
+        oy += 35
+        addMoreLabel(oy, "Nearby Friends", #selector(didTapNearby))
         
-        oy += 30
-        addMoreLabel(oy, "Activities")
+        oy += 35
+        addMoreLabel(oy, "Activities", #selector(didTapActivity))
         
-        oy += 30
+        oy += 35
         addMoreLabel(oy, "Recent")
         
-        oy += 30
-        addMoreLabel(oy, "Setting")
+        oy += 35
+        addMoreLabel(oy, "Setting", #selector(didTapSetting))
     }
     
+    func didTapNearby(){
+        delegate?.menuWindowDidClickNearby(self)
+    }
     
+    func didTapActivity(){
+        delegate?.menuWindowDidClickActivity(self)
+    }
     
-    func addMoreLabel(oy : CGFloat, _ text : String) {
+    func didTapSetting(){
+        delegate?.menuWindowDidClickSetting(self)
+    }
+    
+    func addMoreLabel(oy : CGFloat, _ text : String, _ sel : Selector? = nil) {
         let label = UILabel().withText(text).withTextColor(UIColor.whiteColor()).withFontHeletica(16)
         label.frame = CGRectMake(20, oy, 200, 50)
+        if sel != nil {
+            label.addTapGestureTarget(self, action: sel!)
+        }
         addSubview(label)
     }
     

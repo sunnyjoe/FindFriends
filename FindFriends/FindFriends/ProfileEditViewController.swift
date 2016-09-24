@@ -101,7 +101,7 @@ class ProfileEditViewController: UIViewController, ZESegmentedsViewDelegate {
         
         let arrow = UIImageView(frame: CGRectMake(CGRectGetMaxX(inputL.frame) - 1, frame.origin.y, 6.5 + 15, frame.size.height))
         arrow.contentMode = .Center
-        arrow.image = UIImage(named: "TutorialArrowDown")
+        //arrow.image = UIImage(named: "TutorialArrowDown")
         conv.addSubview(arrow)
         arrow.layer.borderWidth = 1
         arrow.layer.borderColor = UIColor.defaultBlack().CGColor

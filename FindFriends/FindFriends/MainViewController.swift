@@ -23,7 +23,7 @@ class MainViewController: BasicViewController {
     private lazy var menuWindow : MenuWindow = {
         let menuWindow = MenuWindow(frame : CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width - showMenuMainViewRemain, UIScreen.mainScreen().bounds.size.height))
         menuWindow.windowLevel = UIWindowLevelNormal - 1
-        
+        menuWindow.delegate = self
         return menuWindow
     }()
     
@@ -41,21 +41,11 @@ class MainViewController: BasicViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         
-        ConfigDataContainer.sharedInstance.getCachedRecommendFriends({(recFriends : [FriendInfo]) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
-                self.recommendFriends = recFriends
-                
-                let fake1 = FriendInfo()
-                fake1.name = "Sunny Jiao"
-                fake1.careerInfo = "Supply Chain"
-                fake1.isFemale = true
-             //   fake1.imageUrl = "http://beauty.pclady.com.cn/sszr/0601/pic/20060117_bb_9.jpg"
-                
-                
-                self.recommendFriends = [fake1, fake1]
-                self.buildRecommendView()
-            })
-        })
+      //  ConfigDataContainer.sharedInstance.getCachedRecommendFriends({(recFriends : [FriendInfo]) -> Void in
+      //      dispatch_async(dispatch_get_main_queue(), {
+              //  self.recommendFriends = recFriends
+      //      })
+     //   })
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -68,6 +58,8 @@ class MainViewController: BasicViewController {
         view.backgroundColor = UIColor.whiteColor()
         
         title = "Find Friend"
+        
+
         //
         //        let chatButton = UIButton(frame : CGRectMake(30, 100, 100 , 40))
         //        // view.addSubview(chatButton)
@@ -87,6 +79,21 @@ class MainViewController: BasicViewController {
         recommendScrollView.showsHorizontalScrollIndicator = false
         recommendScrollView.pagingEnabled = true
         
+        let fake1 = FriendInfo()
+        fake1.name = "Sunny Jiao"
+        fake1.careerInfo = "Supply Chain"
+        fake1.isFemale = true
+        fake1.imageUrl = "http://beauty.pclady.com.cn/sszr/0601/pic/20060117_bb_9.jpg"
+        
+        let fake2 = FriendInfo()
+        fake2.name = "Saffira Low"
+        fake2.careerInfo = "Sales"
+        fake2.isFemale = true
+        fake2.imageUrl = "https://thumbs.dreamstime.com/z/asian-girl-tennis-racket-1729083.jpg"
+        
+        
+        recommendFriends = [fake2, fake1]
+        buildRecommendView()
         
         nextBtn.frame = CGRectMake(50, 100, view.frame.size.width - 50 * 2, 30)
         view.addSubview(nextBtn)
@@ -207,3 +214,19 @@ extension MainViewController : EMContactManagerDelegate, RecommendCardViewDelega
     
 }
 
+extension MainViewController : MenuWindowDelegate{
+    func menuWindowDidClickNearby(menuWindow: MenuWindow) {
+        showMenu(false)
+        navigationController?.pushViewController(NearbyFriendsViewController(), animated: true)
+    }
+    
+    func menuWindowDidClickActivity(menuWindow: MenuWindow) {
+        showMenu(false)
+        navigationController?.pushViewController(ActivityViewController(), animated: true)
+    }
+    
+    func menuWindowDidClickSetting(menuWindow: MenuWindow) {
+        showMenu(false)
+        navigationController?.pushViewController(SettingsViewController(), animated: true)
+    }
+}

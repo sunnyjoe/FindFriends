@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F27C8441D547B8100AA8987 /* TestNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F27C8431D547B8100AA8987 /* TestNetTask.swift */; };
+		0FA8CF061D96A91000472F5F /* NearbyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8CF051D96A91000472F5F /* NearbyFriendsViewController.swift */; };
+		0FA8CF081D96B1E400472F5F /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8CF071D96B1E400472F5F /* ActivityViewController.swift */; };
+		0FA8CF0A1D96B74900472F5F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8CF091D96B74900472F5F /* SettingsViewController.swift */; };
+		0FD334AE1D96BAF1003DA8CE /* MOTableCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD334AD1D96BAF1003DA8CE /* MOTableCellBuilder.m */; };
 		6D0064421D34FB3400CA97C2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C0791D34EF7500158186 /* CoreMedia.framework */; };
 		6D0064431D34FB3E00CA97C2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C07B1D34EF7C00158186 /* AudioToolbox.framework */; };
 		6D0064441D34FB4400CA97C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD0C07D1D34EF8400158186 /* AVFoundation.framework */; };
@@ -188,6 +192,11 @@
 
 /* Begin PBXFileReference section */
 		0F27C8431D547B8100AA8987 /* TestNetTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNetTask.swift; sourceTree = "<group>"; };
+		0FA8CF051D96A91000472F5F /* NearbyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyFriendsViewController.swift; sourceTree = "<group>"; };
+		0FA8CF071D96B1E400472F5F /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		0FA8CF091D96B74900472F5F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0FD334AC1D96BAF1003DA8CE /* MOTableCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTableCellBuilder.h; sourceTree = "<group>"; };
+		0FD334AD1D96BAF1003DA8CE /* MOTableCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTableCellBuilder.m; sourceTree = "<group>"; };
 		6D0064471D34FB5D00CA97C2 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6D52031A1D34F86100FEC17F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6D5D44F51D3E24BF00FA5212 /* NetWorkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkHandler.swift; sourceTree = "<group>"; };
@@ -615,6 +624,9 @@
 			isa = PBXGroup;
 			children = (
 				6DC6C8D21D333A8E003F7787 /* MainViewController.swift */,
+				0FA8CF051D96A91000472F5F /* NearbyFriendsViewController.swift */,
+				0FA8CF071D96B1E400472F5F /* ActivityViewController.swift */,
+				0FA8CF091D96B74900472F5F /* SettingsViewController.swift */,
 				6D69556B1D37829E001AC1CB /* View */,
 			);
 			name = HomePage;
@@ -715,6 +727,8 @@
 		6D69556B1D37829E001AC1CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0FD334AC1D96BAF1003DA8CE /* MOTableCellBuilder.h */,
+				0FD334AD1D96BAF1003DA8CE /* MOTableCellBuilder.m */,
 				6D69556C1D3782C4001AC1CB /* RecommendCardView.swift */,
 			);
 			name = View;
@@ -1518,6 +1532,7 @@
 					6DC6C8CC1D333A8D003F7787 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = NW4B2RFZ4C;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -1617,6 +1632,7 @@
 				6D6E470F1D34FF700042BBCD /* EaseUI.m in Sources */,
 				6D6E47101D34FF700042BBCD /* EMAudioPlayerUtil.m in Sources */,
 				6D6E476C1D34FF700042BBCD /* EaseRefreshTableViewController.m in Sources */,
+				0FA8CF061D96A91000472F5F /* NearbyFriendsViewController.swift in Sources */,
 				6D6BAE071D7D515300CA0C1D /* DJAlertView+Block.m in Sources */,
 				6D8B5E511D7D297C0055DDCD /* ProfileEditViewController.swift in Sources */,
 				6D6E47141D34FF700042BBCD /* EMCDDeviceManager+ProximitySensor.m in Sources */,
@@ -1644,8 +1660,10 @@
 				6D6E471D1D34FF700042BBCD /* MBProgressHUD.m in Sources */,
 				6D6E47751D34FF700042BBCD /* EaseBubbleView+Gif.m in Sources */,
 				6D6E472F1D34FF700042BBCD /* UIScrollView+MJRefresh.m in Sources */,
+				0FA8CF081D96B1E400472F5F /* ActivityViewController.swift in Sources */,
 				6D6E473C1D34FF700042BBCD /* EMSDWebImageDecoder.m in Sources */,
 				6D6E47481D34FF700042BBCD /* UIImageView+EMWebCache.m in Sources */,
+				0FA8CF0A1D96B74900472F5F /* SettingsViewController.swift in Sources */,
 				6D6E47781D34FF700042BBCD /* EaseBubbleView+Text.m in Sources */,
 				6D6E471C1D34FF700042BBCD /* MBProgressHUD+Add.m in Sources */,
 				6D6E42921D34FCCF0042BBCD /* MainViewController.swift in Sources */,
@@ -1699,6 +1717,7 @@
 				6D6E47551D34FF700042BBCD /* PSTGridLayoutRow.m in Sources */,
 				6D6BAE101D7D520400CA0C1D /* UIImage+Mozat.m in Sources */,
 				6D6E47561D34FF700042BBCD /* PSTGridLayoutSection.m in Sources */,
+				0FD334AE1D96BAF1003DA8CE /* MOTableCellBuilder.m in Sources */,
 				6D6E475C1D34FF700042BBCD /* NSDate+Category.m in Sources */,
 				6D6E47291D34FF700042BBCD /* MJRefreshGifHeader.m in Sources */,
 				6D6E47611D34FF700042BBCD /* EaseChineseToPinyin.m in Sources */,
@@ -1906,6 +1925,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FindFriends/FindFriends-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1941,6 +1961,7 @@
 				PROVISIONING_PROFILE = "8911ec45-afc0-4ee9-bbe7-8b94f33ce284";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FindFriends/FindFriends-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

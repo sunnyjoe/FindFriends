@@ -36,15 +36,18 @@ class LoginViewController : BasicViewController{
         view.addTapGestureTarget(self, action: #selector(LoginViewController.hideKeyboard))
         
         scrollView.frame = view.bounds
-        let image = UIImage(named: "LoginPageHeaderLogo")
-        
-        let logoImageView = UIImageView(image: image)
-        var oy : CGFloat = 54
-        if view.frame.size.width < 375 {
-            oy = 5
+        guard let image = UIImage(named: "LoginPageHeaderLogo") else {
+            return
         }
         
-        logoImageView.frame = CGRect(x: view.frame.width / 2 - image!.size.width / 2, y: oy, width: image!.size.width, height: image!.size.height)
+        let logoImageView = UIImageView(image: image)
+        var oy : CGFloat = 70
+        
+        if view.frame.size.width < 375 {
+            oy = 15
+        }
+        
+        logoImageView.frame = CGRect(x: view.frame.width / 2 - image.size.width / 2, y: oy, width: image.size.width, height: image.size.height)
         
         var oyInput : CGFloat = 47
         if view.frame.size.width < 375 {

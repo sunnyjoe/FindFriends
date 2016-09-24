@@ -36,44 +36,47 @@ class RecommendCardView: UIView {
         bigIV.userInteractionEnabled = true
         bigIV.addTapGestureTarget(self, action: #selector(didClickBigIV))
         
-        if let url = NSURL(string : "https://thumbs.dreamstime.com/z/asian-girl-tennis-racket-1729083.jpg"){
-            bigIV.sd_setImageWithURL(url)
+        //
+        if let iu = friendInfo!.imageUrl{
+            if let url = NSURL(string : iu){
+                bigIV.sd_setImageWithURL(url)
+            }
         }
         
-//        if let sex = friendInfo!.isFemale{
-//            if sex {
-//                bigIV.backgroundColor = UIColor(fromHexString: "FFB6C1", alpha: 0.8)
-//            }else{
-//                bigIV.backgroundColor = UIColor(fromHexString: "6495ED", alpha: 0.8)
-//            }
-//        }
+        //        if let sex = friendInfo!.isFemale{
+        //            if sex {
+        //                bigIV.backgroundColor = UIColor(fromHexString: "FFB6C1", alpha: 0.8)
+        //            }else{
+        //                bigIV.backgroundColor = UIColor(fromHexString: "6495ED", alpha: 0.8)
+        //            }
+        //        }
         
-      //  let handler = {(info : FriendInfo?) -> Void in
-       //     if let friend = info {
-                let topLeftIV = UIImageView(frame : CGRectMake(5, 5, 70, 70))
-                topLeftIV.backgroundColor = UIColor.whiteColor()
-                topLeftIV.layer.cornerRadius = topLeftIV.frame.size.width / 2
-                topLeftIV.layer.borderColor = UIColor.lightGrayColor().CGColor
-                topLeftIV.layer.borderWidth = 0.5
-                topLeftIV.contentMode = .ScaleAspectFill
-                topLeftIV.clipsToBounds = true
-                topLeftIV.userInteractionEnabled = true
-                topLeftIV.addTapGestureTarget(self, action: #selector(self.didClickBigIV))
-                self.addSubview(topLeftIV)
-//                if let imageStr = friend.imageUrl{
-                    if let url = NSURL(string : "https://wallpaperscraft.com/image/asian_girl_grass_flowers_88742_1920x1080.jpg"){
-                        topLeftIV.sd_setImageWithURL(url)
-                    }
-               // }
-       //     }
-      //  }
+        //  let handler = {(info : FriendInfo?) -> Void in
+        //     if let friend = info {
+        let topLeftIV = UIImageView(frame : CGRectMake(5, 5, 70, 70))
+        topLeftIV.backgroundColor = UIColor.whiteColor()
+        topLeftIV.layer.cornerRadius = topLeftIV.frame.size.width / 2
+        topLeftIV.layer.borderColor = UIColor.lightGrayColor().CGColor
+        topLeftIV.layer.borderWidth = 0.5
+        topLeftIV.contentMode = .ScaleAspectFill
+        topLeftIV.clipsToBounds = true
+        topLeftIV.userInteractionEnabled = true
+        topLeftIV.addTapGestureTarget(self, action: #selector(self.didClickBigIV))
+        self.addSubview(topLeftIV)
+        //                if let imageStr = friend.imageUrl{
+        if let url = NSURL(string : "https://wallpaperscraft.com/image/asian_girl_grass_flowers_88742_1920x1080.jpg"){
+            topLeftIV.sd_setImageWithURL(url)
+        }
+        // }
+        //     }
+        //  }
         
-//        ConfigDataContainer.sharedInstance.getFriendInfoById(friendInfo!.throughFriendId, handler)
+        //        ConfigDataContainer.sharedInstance.getFriendInfoById(friendInfo!.throughFriendId, handler)
         
         let nameLabel = UILabel(frame : CGRectMake(0, CGRectGetMaxY(bigIV.frame) + 10, frame.size.width, 30))
         nameLabel.text = friendInfo!.name
         nameLabel.textAlignment = .Center
-        nameLabel.withTextColor(UIColor.defaultBlack()).withFontHeleticaMedium(16)
+        nameLabel.withTextColor(UIColor.defaultBlack()).withFontHeletica(16)
         addSubview(nameLabel)
         
         if let careerInfo = friendInfo!.careerInfo {
