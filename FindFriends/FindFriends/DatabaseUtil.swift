@@ -2,7 +2,7 @@
 //  DatabaseUtil.swift
 //  DejaFashion
 //
-//  Created by DanyChen on 21/12/15.
+//  Created by QingJiao on 21/12/15.
 //  Copyright © 2015 Mozat. All rights reserved.
 //
 
